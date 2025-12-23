@@ -1,10 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Sobre mi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Página sobre mi</title>
+    <link rel="stylesheet" href="../CSS/estilosAbout.css" />
 </head>
 <body>
+
+<!-- Barra de navegación -->
+<nav class="navbar" role="navigation" aria-label="Barra de navegación principal">
+    <div class="brand">Pablo García Blanco</div>
+    <div class="nav-links" role="menu">
+        <a href="index.html" >Inicio</a>
+        <a href="about.html" class="active">Sobre mi</a>
+        <a href="degree.html">Carrera</a>
+        <a href="topic.html">Tema de interés</a>
+        <a href="net.html">Red</a>
+        <a href="contact.html" >Contacto</a>
+    </div>
+</nav>
+
+<main class="content-main">
+    <!-- Sección Sobre mí: -->
+    <section class="about-section" id="sobre-mi" aria-labelledby="sobre-mi-title">
+        <h2 id="sobre-mi-title">Sobre mí</h2>
+        <p>Hola, soy Pablo García Blanco. Me metí en el mundo de la informática porque siempre me ha gustado desde pequeño, acabé aquí porque la carrera de Ciencia y Tecnología de los Alimentos no me apasionaba por lo que decidií hacer Formación Profesional y acabar en la UFV haciendo la Ingeniería Informática.
+        Otras experiencias que he tenido también es trabajar y estudiar en países como Irlanda o Estados Unidos de friegaplatos. Además también ayudo a mi familia en el restaurante que tenemos. (Dejo el link por aqui por si alguien quisiera visitarnos...)
+        También me alucina la ciberseguridad y tengo claro que es a lo que me quiero dedicar de futuro.</p>
+        <ul>
+            <li>Formación: Técnico Superior en Desarrollo de Aplicaciones Multiplataforma. Master FP en Ciberseguridad de las Ciencias de la Información con certificado de Junior Penetration Tester por la empresa de ciberseguridad INE.</li>
+            <li>Experiencia: Desarrollador Full-Stack en la Universidad Nebrija. También hago laboratorios en la página de Hack the Box para poner en práctica técnicas de Hacking.</li>
+            <li>Intereses: Ciberseguridad, desarrollo de código, aprendizaje continuo...</li>
+        </ul>
+        <a href="https://www.linkedin.com/in/pablogarciablanco/"> Mi Linkedin</a>
+        <a href="https://app.hackthebox.com/users/2279806">Mi Hack The Box User (hace falta iniciar sesión)</a>
+    </section>
+
+    <!-- Sección CV:  -->
+    <section class="cv-section" id="cv" aria-labelledby="cv-title">
+        <h1 id="cv-title">Currículum Vitae</h1>
+        <p>Descarga o visualiza el CV directamente en la página.</p>
+        <div class="cv-actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
+            <a class="btn" href="../DOC/CV.pdf" download>Descargar CV</a>
+            <a class="btn btn-ghost" href="../DOC/CV.pdf" target="_blank" rel="noopener">Abrir en nueva pestaña</a>
+        </div>
+
+        <!-- iframe para mostrar PDF  -->
+        <iframe class="cv-embed" src="../DOC/CV.pdf" title="CV de Pablo García Blanco"></iframe>
+        <noscript>
+            <p><a href="../DOC/CV.pdf" target="_blank" rel="noopener">Ver CV</a></p>
+        </noscript>
+    </section>
+
+    <!-- Sección Fotos: -->
+    <section class="photos-section" id="fotos" aria-labelledby="fotos-title">
+        <h2 id="fotos-title">Fotos</h2>
+        <div class="photo-grid" role="list">
+            <figure role="listitem">
+                <img src="../imagenes/USA.JPG" alt="Foto de Pablo - 1">
+                <figcaption>En la fiesta del 4 Julio trabajando en EEUU.</figcaption>
+            </figure>
+            <figure role="listitem">
+                <img src="../imagenes/certificado.jpg" alt="Foto de Pablo - 2">
+                <figcaption>Mi certificado de Junior Penetration Tester (también llamado ejptv).</figcaption>
+            </figure>
+        </div>
+    </section>
+</main>
+
+
 
 </body>
 </html>

@@ -1,10 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Página de contacto</title>
+    <link rel="stylesheet" href="../CSS/estilosContact.css" />
+
 </head>
 <body>
 
+<!-- Barra de navegación -->
+<nav class="navbar" role="navigation" aria-label="Barra de navegación principal">
+    <div class="brand">Pablo García Blanco</div>
+    <div class="nav-links" role="menu">
+        <a href="index.html" >Inicio</a>
+        <a href="about.html">Sobre mi</a>
+        <a href="degree.html">Carrera</a>
+        <a href="topic.html">Tema de interés</a>
+        <a href="net.html">Red</a>
+        <a href="contact.html" class="active">Contacto</a>
+    </div>
+</nav>
+
+
+    <main>
+        <section class="contact-wrap" aria-labelledby="contact-title">
+            <h1 id="contact-title">Contacto</h1>
+            <p>Rellena el formulario para ponerse en contacto con el creador de la página y recibir información.</p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-row">
+                    <label for="name">Nombre completo</label>
+                    <input id="name" name="name" type="text" required autocomplete="name" placeholder="Tu nombre" />
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" name="email" type="email" required autocomplete="email" placeholder="tu@ejemplo.com" />
+                </div>
+
+                <div class="form-row">
+                    <label for="subject">Asunto</label>
+                    <input id="subject" name="subject" type="text" placeholder="Motivo del mensaje" />
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Enviar</button>
+                    <button type="reset" class="btn btn-ghost">Limpiar</button>
+                </div>
+
+                <div id="form-status" role="status" aria-live="polite" class="status" hidden></div>
+            </form>
+        </section>
+    </main>
+
+
+
+    <script>
+        //Esto es una simulación de envío de formulario en el cliente para hacerlo más realista
+        (function(){
+            const form = document.getElementById('contact-form');
+            const status = document.getElementById('form-status');
+
+            function showStatus(text, kind){
+                status.textContent = text;
+                status.className = 'status ' + (kind === 'ok' ? 'success' : 'error');
+                status.hidden = false;
+            }
+
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                status.hidden = true;
+
+                // Validación nativa
+                if (!form.checkValidity()){
+                    // Encontrar primer campo inválido y mostrar mensaje breve
+                    const firstInvalid = form.querySelector(':invalid');
+                    firstInvalid.focus();
+                    showStatus('Por favor completa los campos requeridos correctamente.', 'error');
+                    return;
+                }
+
+                // Recoger datos
+                const data = {
+                    name: form.name.value.trim(),
+                    email: form.email.value.trim(),
+                    subject: form.subject.value.trim(),
+                    message: form.message.value.trim()
+                };
+
+                // Simulación de envío
+                showStatus('Enviando mensaje...', 'ok');
+                setTimeout(() => {
+                    showStatus('Mensaje enviado correctamente. Gracias, ' + (data.name || '') + '.', 'ok');
+                    form.reset();
+                }, 900);
+            });
+        })();
+    </script>
 </body>
 </html>

@@ -140,3 +140,13 @@ p{ margin:0 0 12px 0; line-height:1.5; color:#333; }
     .nav-links a{ padding:6px 8px; font-size:0.9rem; }
     main{ padding-top:96px; }
 }
+
+/* =========================
+   Footer
+========================= */
+footer{
+    text-align:center;
+    padding:15px;
+    color:white;
+    margin-top:150px;
+}

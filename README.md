@@ -1,4 +1,5 @@
 # Documento Detallado de Diseño (DDD)
+*Una pequeña aclaración es que en mi ID tengo mi otro github añadido y no se por qué pero se creó el proyecto con mis dos usuarios así que el usuario garciiss soy yo, Pablo García Blanco desde mi github personal.
 
 ## Descripción del trabajo
 El trabajo consiste en realizar una página web con distintas vistas como una página principal, una página de contacto, una página de información personal, una págima del curso que estoy estudiando y de que se trata con sus respectivas asignaturas así como también
@@ -47,5 +48,5 @@ También durante la publicación en el entorno de Github Pages he tenido que doc
 - Recomendado: navegador moderno para pruebas (Chromium/Firefox/Edge) y también he utilizado como método de pruebas el entorno que emplea el ID de IntelliJ.
 
 ## Contacto
-Autor: Pablo García Blanco  
+Autor: Pablo García Blanco
 Repositorio: revisar `README.md` en la raíz para instrucciones y recursos.

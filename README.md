@@ -4,9 +4,14 @@
 ## Descripción del trabajo
 El trabajo consiste en realizar una página web con distintas vistas como una página principal, una página de contacto, una página de información personal, una págima del curso que estoy estudiando y de que se trata con sus respectivas asignaturas así como también
 información detallada de la asignatura de Fundamentos de Ingeniería Informática. Una vez acabado habrá que publicarlo en el entorno de GitHub pages para hacerlo público a todo el mundo. Mientras tanto cualquier cambio que hagamos en el repositorio se tendrá que comentar y subir al repositorio de GitHub para ver como ha sido cada cambio y cada actualización.
+Todo este trabajo será puramente visual lo que quiere decir que no tiene ningun back-end incorporado ya que así se ha pedido.
+No se podría especificar que tipo de arquitectura tiene este proyecto pero diría que sigue una arquitectura monolítica ya que es una única unidad e indivisible porque si quitas alguna página el resto podría dar algún fallo.
+Este proyecto es fácil escalable porque como es básico y no tiene ni back-end, front-end es muy básico no hay manejo de excepciones ni ciberseguridad pues podría mejorar en gran cantidad.
+El flujo de funcionamiento es básicamente que el cliente interactúe con el front-end y visite todo el contenido sin realizar ninguna petición. Lo único que valida por el lado del cliente es un formulario de contacto realizado mediante Javascript.
+
 
 Principales funcionalidades implementadas:
-- Hero con imagen de fondo y fallback `noscript`.
+- Banner con imagen de fondo y fallback `noscript`.
 - Formulario de contacto con validación nativa y simulación de envío.
 - Embed de PDF para el CV y enlaces de descarga.
 - Grid responsivo para las fotos.
@@ -33,6 +38,7 @@ También durante la publicación en el entorno de Github Pages he tenido que doc
 3. La otra opción es usar el siguiente link en el navegador: https://pablo-garcia-blanco.github.io/Web_Pablo_Garcia_Blanco/docs/index.html
 
 ## Estructura del repositorio.
+- `idea` - Contiene las configuraciones básicas del proyecto proporcionado por el ID del Intellij.
 - `docs/` - Contiene las carpetas del css, la página principal, la carpeta public, donde se encuentra el resto de las páginas webs, imagenes, donde se encuentran almacenadas todas las imágenes y por último el index.html que corresponde a la página principal.
 - `public/` - Contiene el resto de subpáginas web. (`about.html`, `net.html`...)  
 - `CSS/` — hojas de estilo (`estilosIndex.css`, `estilosAbout.css`, ...).  
@@ -40,13 +46,15 @@ También durante la publicación en el entorno de Github Pages he tenido que doc
 - `DOC/` — documentos (CV.pdf).  
 - `.gitignore` — reglas para Git.  
 - `README.md` — este documento.
+  
 
 ## Tecnologías
 - HTML5, CSS3, JavaScript (vanilla).
 - ID utilizado: Intellij ques un ID de pago que con el correo de la universidad sale gratis siempre y es muy bueno.
-- Control de versiones: Git / GitHub.  
+- Control de versiones: GitHub.  
 - Recomendado: navegador moderno para pruebas (Chromium/Firefox/Edge) y también he utilizado como método de pruebas el entorno que emplea el ID de IntelliJ.
 
 ## Contacto
 Autor: Pablo García Blanco
-Repositorio: revisar `README.md` en la raíz para instrucciones y recursos.
+
+
